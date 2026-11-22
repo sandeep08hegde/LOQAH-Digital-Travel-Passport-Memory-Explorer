@@ -7,8 +7,6 @@ services:
     dockerContext: ./backend
     healthCheckPath: /api/health
     envVars:
-      - key: SERVER_PORT
-        value: "10000"
       - key: SPRING_DATASOURCE_URL
         sync: false
       - key: SPRING_DATASOURCE_USERNAME
@@ -18,12 +16,11 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: JAVA_TOOL_OPTIONS
-        value: "-XX:MaxRAMPercentage=75.0"
+        value: "-XX:MaxRAMPercentage=70.0 -XX:+UseSerialGC"
 
   - type: web
     name: loqah-frontend
     runtime: static
-    plan: free
     buildCommand: ""
     staticPublishPath: ./frontend
     routes:
