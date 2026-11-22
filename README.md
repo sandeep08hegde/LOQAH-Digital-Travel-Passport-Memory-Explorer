@@ -2,7 +2,7 @@
 
 LOQAH is a travel passport and memory-exploration application. This repository contains the current full-stack starter and free-tier deployment configuration.
 
-## Stack
+## Git workflow\n\nWe use `main` for production, `develop` for integration, and short-lived `feature/*`, `fix/*`, and `hotfix/*` branches. All normal work should go through a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for branch naming, commit conventions, testing, and release steps.\n\n## Stack
 Java 21 · Spring Boot 3.5 · Maven · Spring Security · JWT · PostgreSQL · Spring Data JPA · Flyway · HTML/CSS/JavaScript.
 
 ## Run locally (no Docker required)
