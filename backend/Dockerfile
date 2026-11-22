@@ -9,5 +9,5 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=build /app/target/loqah-api-0.1.0.jar app.jar
 EXPOSE 10000
-ENV SERVER_PORT=10000
+ENV PORT=10000
 ENTRYPOINT ["java","-XX:MaxRAMPercentage=75.0","-jar","/app/app.jar"]
