@@ -4,9 +4,9 @@ spring:
   application:
     name: loqah-api
   datasource:
-    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/loqah}
-    username: ${DB_USERNAME:loqah}
-    password: ${DB_PASSWORD:loqah}
+    url: ${SPRING_DATASOURCE_URL:${DATABASE_URL:jdbc:postgresql://localhost:5432/loqah}}
+    username: ${SPRING_DATASOURCE_USERNAME:${DB_USERNAME:loqah}}
+    password: ${SPRING_DATASOURCE_PASSWORD:${DB_PASSWORD:loqah}}
   jpa:
     hibernate:
       ddl-auto: validate
